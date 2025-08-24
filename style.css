@@ -1,149 +1,188 @@
-*{
-  margin: 0px;
-  padding: 0px;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  height: 100vh;
-  width: 100vw;
+body {
+  min-height: 100vh;
+  width: 100%;
   display: flex;
-  padding: 40px;
+  padding: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   background: #262626;
 }
 
-.card{
-  position: static;
-  top: 100px;
-  width: 700px;
-  max-height: 270px;
-  border-radius: 20px 20px 0px 0px;
-  margin: 20px;
-  margin-bottom: 0px;
-  padding: 40px;
-  padding-bottom: 0px;
+.card {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 20px 20px 0 0;
+  margin: 20px auto 0 auto;
+  padding: 20px;
   display: flex;
-  gap: 30px ;
+  gap: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 3px solid rgb(255, 255, 255);
-  background-color: #ffffff;  
+  border: 3px solid #fff;
+  background-color: #fff;
 }
 
-.card:hover{
+.card:hover {
   animation: ease-in-out 10s;
   box-shadow: #ededed -10px -10px 100px;
 }
 
-.entertask{
-  width: 80%;
+.entertask {
+  width: 100%;
   height: 60px;
   padding: 5px;
   border-radius: 10px;
 }
 
-.tasklist{
-  width: 80%;
-  height: 60px;
+.tasklist {
+  width: 100%;
+  height: auto;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: #fff;
+  flex-wrap: wrap;
 }
 
-#input{
-  width: 75%;
-  height: 100%;
-  margin-right: 10px;
+#input {
+  flex: 1;
+  min-width: 150px;
+  height: 45px;
   padding: 10px;
   border: 3px solid #b40df0;
   border-radius: 10px;
 }
 
-#button{
-  width: 20%;
-  height: 100%;
-  color: #ffffff;
+#button {
+  min-width: 80px;
+  height: 45px;
+  color: #fff;
   background: #b40df0;
   font-weight: bold;
   border-radius: 10px;
 }
 
-.button{
+.button {
   margin-right: 10px;
-  width: 40%;
-  height: 60%;
-  color: #ffffff;
+  min-width: 80px;
+  height: 40px;
+  color: #fff;
   background: #b40df0;
   font-weight: bold;
   border-radius: 10px;
 }
 
-.heading{
-  width: 70%;
-  padding: 20px;
-  overflow: hidden;
+.heading {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
 }
 
-.btn{
-  width: 30%;
-  height: 100%;
+.btn {
+  width: auto;
   display: flex;
   align-items: center;
-  justify-content: right;  
+  justify-content: center;
 }
 
-p{
+p {
   overflow: hidden;
 }
 
-#task{
-  background-color: #ffffff;
-  width: 500px;
+#task {
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
 }
-.tasks{
-  width: 700px;
-  min-height: 0px;
-  border-radius: 0px 0px 20px 20px;
+
+.tasks {
+  width: 100%;
+  max-width: 700px;
+  min-height: 100px;
+  border-radius: 0 0 20px 20px;
   padding: 10px;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   flex-direction: column;
   align-items: center;
-  justify-content:safe;
-  overflow-y: scroll;
-  border: 3px solid rgb(255, 255, 255);
-  background-color: #c0bfbf;  
+  justify-content: flex-start;
+  overflow-y: auto;
+  border: 3px solid #fff;
+  background-color: #c0bfbf;
 }
 
 div::-webkit-scrollbar {
   display: none;
 }
 
-.btndiv{
-
-  width: 25%;
-  height: 35px;
+.btndiv {
+  width: 100%;
+  max-width: 300px;
+  height: 40px;
   position: sticky;
-  bottom: 0%;
+  bottom: 0;
   background-color: #fff;
   align-items: center;
   border-radius: 10px;
-  }
-.clearallbtn{
-  position: sticky;
-  bottom: 0%;
-  margin-right: 10px;
+}
+
+.clearallbtn {
   width: 100%;
   height: 100%;
-  color: #ffffff;
+  color: #fff;
   background: #b40df0;
   font-weight: bold;
   border-radius: 10px;
+}
+
+/* 🔥 Responsive Media Queries */
+@media (max-width: 768px) {
+  .card, .tasks {
+    width: 95%;
+    padding: 15px;
+  }
+
+  #input {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  #button, .button {
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .tasklist {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #input, #button {
+    width: 100%;
+    margin: 0;
+  }
+
+  .btndiv {
+    max-width: 100%;
+  }
 }
