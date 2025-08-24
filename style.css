@@ -1,0 +1,149 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #262626;
+}
+
+.card{
+  position: static;
+  top: 100px;
+  width: 700px;
+  max-height: 270px;
+  border-radius: 20px 20px 0px 0px;
+  margin: 20px;
+  margin-bottom: 0px;
+  padding: 40px;
+  padding-bottom: 0px;
+  display: flex;
+  gap: 30px ;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgb(255, 255, 255);
+  background-color: #ffffff;  
+}
+
+.card:hover{
+  animation: ease-in-out 10s;
+  box-shadow: #ededed -10px -10px 100px;
+}
+
+.entertask{
+  width: 80%;
+  height: 60px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.tasklist{
+  width: 80%;
+  height: 60px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+#input{
+  width: 75%;
+  height: 100%;
+  margin-right: 10px;
+  padding: 10px;
+  border: 3px solid #b40df0;
+  border-radius: 10px;
+}
+
+#button{
+  width: 20%;
+  height: 100%;
+  color: #ffffff;
+  background: #b40df0;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.button{
+  margin-right: 10px;
+  width: 40%;
+  height: 60%;
+  color: #ffffff;
+  background: #b40df0;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.heading{
+  width: 70%;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.btn{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;  
+}
+
+p{
+  overflow: hidden;
+}
+
+#task{
+  background-color: #ffffff;
+  width: 500px;
+}
+.tasks{
+  width: 700px;
+  min-height: 0px;
+  border-radius: 0px 0px 20px 20px;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content:safe;
+  overflow-y: scroll;
+  border: 3px solid rgb(255, 255, 255);
+  background-color: #c0bfbf;  
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
+
+.btndiv{
+
+  width: 25%;
+  height: 35px;
+  position: sticky;
+  bottom: 0%;
+  background-color: #fff;
+  align-items: center;
+  border-radius: 10px;
+  }
+.clearallbtn{
+  position: sticky;
+  bottom: 0%;
+  margin-right: 10px;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  background: #b40df0;
+  font-weight: bold;
+  border-radius: 10px;
+}
