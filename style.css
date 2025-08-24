@@ -128,3 +128,83 @@ div::-webkit-scrollbar {
     font-size: 14px;
   }
 }
+
+
+/* आपकी existing CSS वही की वही रखी गई है */
+/* नीचे सिर्फ responsive rules जोड़े गए हैं */
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .card {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .entertask {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #input {
+    width: 100%;
+    height: 45px;
+    margin: 0;
+  }
+
+  #button {
+    width: 100%;
+    height: 45px;
+  }
+
+  .tasks {
+    width: 95%;
+    max-height: 400px;
+    padding: 15px;
+  }
+
+  #task {
+    width: 100%;
+  }
+
+  .btndiv {
+    width: 100%;
+    height: 45px;
+  }
+
+  .clearallbtn {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #input {
+    font-size: 14px;
+  }
+
+  #button, 
+  .clearallbtn {
+    font-size: 14px;
+  }
+
+  .tasks {
+    gap: 10px;
+  }
+}
+
